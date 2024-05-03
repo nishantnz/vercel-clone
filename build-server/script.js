@@ -66,7 +66,7 @@ async function init() {
       const filePath = path.join(distFolderPath, file);
       if (fs.lstatSync(filePath).isDirectory()) continue;
 
-      console.log("Uploading", filePath);
+      console.log("Uploading", file);
       publishLog(`Uploading ${file}`);
 
       const command = new PutObjectCommand({
